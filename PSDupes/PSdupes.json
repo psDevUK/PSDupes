@@ -1,0 +1,77 @@
+{
+  "$schema": "https://aka.ms/PowerShell/Crescendo/Schemas/2021-11",
+  "Commands": [
+    {
+      "Verb": "Invoke",
+      "Noun": "PSdupes",
+      "OriginalName": "$PSScriptRoot\\jdupes\\jdupes.exe",
+      "Platform": ["Windows"],
+      "Description": "Finds duplicate files",
+      "Parameters": [
+          {
+            "ParameterSetName": ["All"],
+            "ParameterType": "string",
+            "OriginalName"  : "",
+            "OriginalPosition": 0,
+            "Name"          : "Path"
+        },
+        {
+          "ParameterSetName": ["All","Summary"],
+            "ParameterType": "switch",
+            "OriginalName"  : "-m",
+            "OriginalPosition": 1,
+            "Name"          : "Summarize"
+        },
+         {
+           "ParameterSetName": ["All","SummaryMatch"],
+          "ParameterType": "switch",
+            "OriginalName"  : "-M",
+            "OriginalPosition": 2,
+            "Name"          : "SummarizeMatchTypes"
+        },
+         {
+           "ParameterSetName": ["All","JSON"],
+            "ParameterType": "switch",
+            "OriginalName"  : "-j",
+            "OriginalPosition": 3,
+            "Name"          : "JSONoutput"
+        },
+         {
+           "ParameterSetName": ["All","Delete"],
+            "ParameterType": "switch",
+            "OriginalName"  : "-N",
+            "OriginalPosition": 4,
+            "Name"          : "NoPrompt"
+        },
+         {
+           "ParameterSetName": ["All","Delete","JSON"],
+          "ParameterType": "switch",
+            "OriginalName"  : "-d",
+            "OriginalPosition": 5,
+            "Name"          : "Delete"
+        },
+         {
+           "ParameterSetName": ["All","Summary","SummaryMatch","Delete","JSON"],
+            "ParameterType": "switch",
+            "OriginalName"  : "-r",
+            "OriginalPosition": 6,
+            "Name"          : "Recurse"
+        },
+         {
+           "ParameterSetName": ["All","Summary","SummaryMatch","Delete","JSON"],
+            "ParameterType": "switch",
+            "OriginalName"  : "-Z",
+            "OriginalPosition": 7,
+            "Name"          : "EnableResultsOnAbort"
+        },
+         {
+           "ParameterSetName": ["All","JSON"],
+           "ParameterType": "switch",
+            "OriginalName"  : "-S",
+            "OriginalPosition": 8,
+            "Name"          : "ShowSize"
+        }
+      ]
+    }
+  ]
+}
